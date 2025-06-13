@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Keshinie</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f7fa;
+            color: #222;
+        }
+        header {
+            background: #1976d2;
+            color: #fff;
+            padding: 2rem 0 1.5rem 0;
+            text-align: center;
+        }
+        nav {
+            margin-bottom: 1rem;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: #fff;
+            padding: 2rem;
+            box-shadow: 0 4px 24px rgba(30,64,175,0.07);
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 2.5rem;
+        }
+        h1, h2 {
+            margin: 0 0 1rem 0;
+        }
+        .contact-form label {
+            display: block;
+            margin: 1rem 0 0.3rem 0;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #bdbdbd;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            background: #1976d2;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: #125699;
+        }
+        footer {
+            text-align: center;
+            color: #888;
+            padding: 2rem 0 1rem 0;
+            background: #f1f1f8;
+            margin-top: 3rem;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dr Keshinie</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Dr Keshinie</h2>
+            <p>
+                Welcome! Dr Keshinie is a dedicated medical professional committed to providing high-quality care to patients of all ages. With years of experience and a compassionate approach, Dr Keshinie strives to ensure every patient feels heard, respected, and supported.
+            </p>
+        </section>
+        <section id="services">
+            <h2>Services</h2>
+            <ul>
+                <li>General Health Consultation</li>
+                <li>Pediatric Care</li>
+                <li>Women's Health</li>
+                <li>Immunizations & Vaccinations</li>
+                <li>Health Screenings</li>
+                <li>Chronic Disease Management</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Dr Keshinie</h2>
+            <form class="contact-form" onsubmit="event.preventDefault(); submitForm();">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+                <div id="form-message" style="margin-top:1rem;"></div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Dr Keshinie. All rights reserved.
+    </footer>
+    <script>
+        function submitForm() {
+            document.getElementById('form-message').textContent = 
+                "Thank you for your message! Dr Keshinie will get back to you soon.";
+            document.querySelector('.contact-form').reset();
+        }
+    </script>
+</body>
+</html>
